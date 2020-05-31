@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/datatables.min.css') }}">
+
+
+  <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <button class="btn btn-outline-success" type="button" onclick="window.location.href = '/';">Home</button>
+      <button class="btn btn-sm btn-outline-secondary" type="button" onclick="window.location.href = '/img-detection';">Detect Image</button>
+      <button class="btn btn-sm btn-outline-secondary" type="button" onclick="window.location.href = '/mongodata';">Database</button>
+    </form>
+  </nav>
+
+  <main>
+    {% block main %}{% endblock %}
+  </main>
+<!--  &lt;!&ndash; Import jquery 3.3.1 slim min &ndash;&gt;-->
+<!--  <script src="{{ url_for('static', filename='js/jquery.slim.min.js') }}"></script>-->
+<!--  &lt;!&ndash; Import Bootstrap bundle &ndash;&gt;-->
+<!--  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>-->
+<!--  &lt;!&ndash; Import our custom JavaScript &ndash;&gt;-->
+<!--  <script src="{{ url_for('static', filename='js/app.js') }}"></script>-->
+  <script src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
+  {% block script %}{% endblock %}
+</body>
+
+</html>
